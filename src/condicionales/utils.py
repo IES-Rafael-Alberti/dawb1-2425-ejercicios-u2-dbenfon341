@@ -1,19 +1,37 @@
 from os import system, name
 
 # Funcion para validar y introducir enteros
-def validar_int(msg: str) -> bool:
+def validar_int_negativo(msg: str) -> bool:
+   """"""
    msg = msg.strip()
    return msg.isdigit() or (msg.startswith("-") and msg[1:].isdigit())
 
-def introducir_int(msg: str) -> int:
+
+def validar_int_positivo(msg: str) -> bool:
+   """"""
+   msg = msg.strip()
+   return msg.isdigit()
+
+
+def introducir_int_positivo(msg: str) -> int:
+    """"""
     msg = input(msg)
-    while not validar_int(msg):
-        msg = input("Debe ser un número entero: ")
+    while not validar_int_positivo(msg):
+        msg = input("Debe ser un número entero positivo: ")
     return int(msg)
 
 
-# Funcion para validar y introducir enteros
+def introducir_int_negativo(msg: str) -> int:
+    """"""
+    msg = input(msg)
+    while not validar_int_negativo(msg):
+        msg = input("Debe ser un número entero negativo: ")
+    return int(msg)
+
+
+# Funcion para validar y introducir flotantes
 def validar_float(valor: str) -> bool:
+    """"""
     valor = valor.strip()
     if not valor or valor in ['-', '+', '.']:
         return False
@@ -32,7 +50,9 @@ def validar_float(valor: str) -> bool:
 
     return valor.isdigit()
 
+
 def introducir_float(msg: str) -> float:
+    """"""
     msg = input(msg)
     while not validar_float(msg):
         msg = input("Debe ser un número flotante: ")
