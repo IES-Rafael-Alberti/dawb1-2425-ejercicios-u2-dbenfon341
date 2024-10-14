@@ -25,7 +25,7 @@ def main():
     edad = anios_validos()
     if es_mayor(edad):
         print(f"Tienes {edad} años y eres mayor de edad.")
-    print("Eres menor de edad.")
+    print(f"Tienes {edad} años y eres menor de edad.")
     
 
 if __name__ == "__main__":
