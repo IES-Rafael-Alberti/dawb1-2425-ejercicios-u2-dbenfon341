@@ -63,3 +63,57 @@ def introducir_float(msg: str) -> float:
 def clear():
     if name == 'nt':
         _ = system('cls')
+
+
+
+
+# Funciones de pedir y validar enteros y flotantes.
+
+def pedir_num(msg) -> int:
+    """
+    
+    """
+    numero = None
+    while numero == None:
+        numero = input(msg)
+        if validar_num(numero):
+            return int(numero)
+        else:
+            print("**ERROR** Debes introducir un número")
+            numero = None
+
+def validar_num(numero: str) -> bool:
+    """
+    
+    """
+    try:
+        if int(numero):
+            return True
+    except ValueError:
+        return False
+    
+def pedir_float(msg) -> float:
+    """
+    
+    """
+    numero = None
+    while numero == None:
+        numero = input(msg)
+        if validar_float(numero):
+            return float(numero)
+        else:
+            print("**ERROR** Debes introducir un número flotante.")
+            numero = None
+
+def validar_float(numero: str) -> bool:
+    """
+    
+    """
+    try:
+        if float(numero):
+            return True
+    except ValueError:
+        return False
+    
+def pause():
+    input("Pulsa ENTER para continuar...")

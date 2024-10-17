@@ -38,14 +38,18 @@
 # Otra forma >>>>
 
 def es_mayor(edad: int) -> bool:
-    """"""
+    """
+    
+    """
     if edad >= 18:
         return True
     else:
         return False
 
 def obtener_edad() -> int:
-    """"""
+    """
+    
+    """
     edad = None
     while edad == None:
         try:
@@ -58,17 +62,20 @@ def obtener_edad() -> int:
     return edad
 
 def mostrar_edad(edad_validada: bool) -> str:
-    """"""
+    """
+    
+    """
     if es_mayor(edad_validada):
         return f"Tienes {edad_validada} años y eres mayor de edad."
     else:
         return f"Tienes {edad_validada} años y eres menor de edad."
 
-
 def main():
+    """
+    
+    """
     edad = obtener_edad()
     print(mostrar_edad(edad))
-
 
 if __name__ == "__main__":
     main()
