@@ -5,7 +5,7 @@ def clear():
     if name == 'nt':
         _ = system('cls')
 
-# Funciones que solicita entero al usuario.
+# Función que solicita entero al usuario.
 def pedir_num(msg) -> int:
     """
     
@@ -58,3 +58,26 @@ def validar_float(numero: str) -> bool:
 # Función para "pausar" la ejecución de un programa hasta que el usuario pulse ENTER.
 def pause():
     input("Pulsa ENTER para continuar...")
+
+
+
+################################################ OTRAS FORMAS DE VALIDAR #################################################
+# # Función que solicita entero al usuario.
+# def pedir_num(msg) -> int:
+#     numero = input(msg)
+#     while not validar_num(numero):
+#         msg = "Introduce un número corecto: "
+#         numero = input(msg)
+#     return int(numero)
+
+# # Función para validar si un número es entero.
+# def validar_num(numero: str) -> bool:
+#     try:
+#         int(numero)
+#         return True
+#     except ValueError:
+#         return False
+    
+# numero = pedir_num("introduce un número: ")
+# print (numero)
+##########################################################################################################################
