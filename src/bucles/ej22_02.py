@@ -16,7 +16,7 @@ def anios_cumplidos(edad: int) -> str:
 
 def mostrar_serie_edad(edad) -> str:
     serie_edad = anios_cumplidos(edad)
-    return f"Para llegar a tu edad actual ({edad}) has tenido que cumplir {serie_edad} años"
+    return f"Para llegar a tu edad actual ({edad}) has tenido que cumplir {serie_edad} años."
     
 
 def main():
