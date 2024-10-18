@@ -7,10 +7,19 @@
 # 5 3 1
 # 7 5 3 1
 # 9 7 5 3 1
+from utils import *
 
+def mostrar_triangulo_rectangulo_numeros(num: int):
+    serie = ""
+    cont = 1
+    while cont <= num:
+        serie = f"{cont} " + serie
+        print (serie)
+        cont +=2
 
 def main():
-    return
+    num = pedir_num("Introduce un número: ")
+    mostrar_triangulo_rectangulo_numeros(num)
 
 if __name__ == "__main__":
     main()
