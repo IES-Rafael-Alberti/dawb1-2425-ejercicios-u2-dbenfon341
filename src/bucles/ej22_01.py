@@ -6,10 +6,11 @@ def pedir_palabra(msj: str) -> str:
     """
     
     """
-    es_palabra_valida = None
-    while es_palabra_valida is None:
+    palabra = None
+    while palabra is None:
         palabra = input(msj).strip()
         if not validar_palabra(palabra):
+            palabra = None
             print("**ERROR** No has introducido una palabra.")
             pause()
         else:
