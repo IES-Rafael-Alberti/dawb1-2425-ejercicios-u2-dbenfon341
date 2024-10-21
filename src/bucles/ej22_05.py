@@ -9,7 +9,6 @@
 from utils import *
 
 def calcular_capital(cantidad: float, interes: float, numero_anios: int):
-
     for i in range(1, numero_anios+1):
         cantidad *= (1 + interes / 100)
         print(f"Año {i}: {cantidad:.2f} €")
