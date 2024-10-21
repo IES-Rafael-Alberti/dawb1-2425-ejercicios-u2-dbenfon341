@@ -9,31 +9,44 @@
 # Meritorio 	0.6 o más
 # 
 # Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
+from utils import *
 
-puntuacion = 2400
+default_puntuacion = 2400
 
 niveles_validos = [0.0, 0.4, 0.6]
 
-inaceptable = 0
-aceptable = 0.4
-meritorio = 0.6
+def validar_puntuacion(puntuacion: float) -> bool:
+    if puntuacion not in niveles_validos and puntuacion < 0.6:
+        return False
+    return True
 
-def calcular_rendimiento(puntuacion: int):
-    if puntuacion == inaceptable:
-        puntuacion = puntuacion * inaceptable
-        return puntuacion, inaceptable
-    return
+def obtener_puntuacion(msj: str) -> float:
+    puntuacion = pedir_float(msj)
+    while not validar_puntuacion(puntuacion):
+        puntuacion = pedir_float("**ERROR** Debes introducir una puntuación de 0.0, 0.4, 0.6 o más: ")
+    return puntuacion
 
+def definir_nivel(puntuacion: float) -> str:
+    if puntuacion == niveles_validos[0]:
+        return "Inaceptable"
+    elif puntuacion == niveles_validos[1]:
+        return "Aceptable"
+    else:
+        return "Meritorio"
 
+def calcular_dinero_recibido(puntuacion: float) -> float:
+    return puntuacion * default_puntuacion
 
-
-
-def mostrar_rendimiento() -> str:
-    return
-
+def mostrar_rendimiento(nivel, dinero) -> str:
+    return f"Su nivel de rendimiento es {nivel} y vas a recibir {dinero} € euros."
 
 def main():
-    return
+    puntuacion = obtener_puntuacion("Introduce tu puntuación: ")
+    nivel = definir_nivel(puntuacion)
+
+    dinero = calcular_dinero_recibido(puntuacion)
+
+    print(mostrar_rendimiento(nivel, dinero))
 
 if __name__ == "__main__":
     main()
