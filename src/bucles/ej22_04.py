@@ -10,7 +10,6 @@ def mostrar_impares(numero: int) -> str:
 
     return serie_numeros[:-2]
 
-
 def main():
     numero = pedir_num("Introduce un número entero positivo: ")
     print(mostrar_impares(numero))

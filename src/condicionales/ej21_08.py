@@ -10,6 +10,28 @@
 # 
 # Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 
+puntuacion = 2400
+
+niveles_validos = [0.0, 0.4, 0.6]
+
+inaceptable = 0
+aceptable = 0.4
+meritorio = 0.6
+
+def calcular_rendimiento(puntuacion: int):
+    if puntuacion == inaceptable:
+        puntuacion = puntuacion * inaceptable
+        return puntuacion, inaceptable
+    return
+
+
+
+
+
+def mostrar_rendimiento() -> str:
+    return
+
+
 def main():
     return
 

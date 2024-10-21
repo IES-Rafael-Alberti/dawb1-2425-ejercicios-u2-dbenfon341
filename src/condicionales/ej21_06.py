@@ -26,6 +26,11 @@ def validar_nombre():
 def validar_genero():
     return
 
+def obtener_grupo():
+    return
+
+def mostrar_informacion():
+    return
 
 
 def main():
