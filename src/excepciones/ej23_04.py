@@ -13,7 +13,10 @@ def pedir_num_positivo(msg) -> int:
 def validar_num_positivo(numero: str) -> bool:
     try:
         int(numero)
-        return int(numero) > 0
+
+        if int(numero) <= 0:
+            raise ValueError("El número debe ser mayor que 0.")
+        return True
     except ValueError as e:
         print(f"La entrada no es correcta. Código de error -> {e}")
         return False
