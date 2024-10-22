@@ -29,6 +29,31 @@ def validar_num(numero: str) -> bool:
         return True
     except ValueError:
         return False
+    
+# Función que solicita entero positivo al usuario.
+def pedir_num_positivo(msg) -> int:
+    """
+    
+    """
+    numero = None
+    while numero == None:
+        numero = input(msg)
+        if validar_num_positivo(numero):
+            return int(numero)
+        else:
+            print("**ERROR** Debes introducir un número entero positivo")
+            numero = None
+
+#Función para validar si el número es entero positivo.
+def validar_num_positivo(numero: str) -> bool:
+    """
+    
+    """
+    try:
+        int(numero)
+        return int(numero) > 0
+    except ValueError:
+        return False
 
 # Función que solicita float al usuario.
 def pedir_float(msg) -> float:
