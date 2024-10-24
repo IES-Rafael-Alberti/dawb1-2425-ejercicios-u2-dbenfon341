@@ -1,12 +1,8 @@
-# Ejercicio 2.2.8
+# Ejercicio 2.2.8 ver 2
 # 
 # Escribir un programa que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo.
 # 
-# 1
-# 3 1
-# 5 3 1
-# 7 5 3 1
-# 9 7 5 3 1
+# Con par/impar
 
 
 def pedir_num_positivo(msg) -> int:
@@ -61,27 +57,6 @@ def mostrar_triangulo_rectangulo_numeros(num: int) -> str:
             serie_completa += f"{serie}\n"
     return serie_completa.strip()
     
-
-# def mostrar_triangulo_rectangulo_numeros(num: int):
-#     cont = 1
-#     serie = ""
-#     serie_completa = ""
-
-#     if es_par_impar(num):
-#         cont -= 
-#         while cont <= num+1:
-#             serie = f"{cont-1} " + serie
-#             cont += 2
-#             serie_completa += f"{serie}\n"
-#         return serie_completa
-#     else:
-#         while cont <= num+1:
-#             serie = f"{cont} " + serie
-#             print(serie)
-#             cont += 2
-#             serie_completa += f"{serie}\n"
-#         return serie_completa
-
 
 def main():
     num = pedir_num_positivo("Introduce un número: ")
