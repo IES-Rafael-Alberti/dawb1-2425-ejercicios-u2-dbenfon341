@@ -11,7 +11,7 @@ def mostrar_menu():
     print("2- imprimir listado")
     print("3- finalizar programa")
 
-def pedir_opcion():
+def pedir_opcion() -> int:
     mostrar_menu()
     opcion = None
     while opcion is None:

@@ -6,7 +6,7 @@ from utils import *
 numero = 0
 cont = 0
 while numero != -1:
-    numero = int(input("NUMBER"))
+    numero = int(input("NUMBER "))
     if numero % 2 == 0:
         cont += 1
 
@@ -17,7 +17,7 @@ while numero != -1:
         print(suma)
 
 
-print(cont)
+print(F"PARES {cont}")
 
 def main():
     return

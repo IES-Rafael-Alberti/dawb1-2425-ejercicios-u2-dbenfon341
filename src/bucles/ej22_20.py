@@ -3,12 +3,16 @@
 # Si el carácter no coincide, indicar que no hay coincidencia en esa posición (imprimiendo la posición) y continuar. 
 # Si se encuentra una coincidencia, indicar en qué posición se encontró y finalizar la ejecución.
 
-frase = input("Ingrese una frase: ")
-buscar_letra = input("Ingrese una letra: ")
+def main():
+    frase = input("Ingrese una frase: ")
+    buscar_letra = input("Ingrese una letra: ")
 
-for i, letra in enumerate(frase):
-    if letra != buscar_letra:
-        print(f"No hay coincidencia en la posición {i}.")
-    else:
-        print(f"Coincidencia encontrada en la posición {i}.")
-        exit()
+    for i, letra in enumerate(frase):
+        if letra != buscar_letra:
+            print(f"No hay coincidencia en la posición {i}.")
+        else:
+            print(f"Coincidencia encontrada en la posición {i}.")
+            exit()
+
+if __name__ == "__main__":
+    main()
