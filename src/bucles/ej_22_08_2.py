@@ -54,14 +54,12 @@ def mostrar_triangulo_rectangulo_numeros(num: int) -> str:
             serie = f"{cont-1} " + serie
             cont += 2
             serie_completa += f"{serie}\n"
-        return serie_completa.strip()
     else:
         while cont <= num+1:
             serie = f"{cont} " + serie
-            print(serie)
             cont += 2
             serie_completa += f"{serie}\n"
-        return serie_completa.strip()
+    return serie_completa.strip()
     
 
 # def mostrar_triangulo_rectangulo_numeros(num: int):
