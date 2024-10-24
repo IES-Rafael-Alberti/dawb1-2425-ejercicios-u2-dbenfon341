@@ -1,6 +1,6 @@
 # Ejercicio 2.2.2
 # Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
-from utils import *
+from src.bucles.utils import *
 
 def validar_edad(edad: int) -> bool:
     if edad < 0 or edad > 100:

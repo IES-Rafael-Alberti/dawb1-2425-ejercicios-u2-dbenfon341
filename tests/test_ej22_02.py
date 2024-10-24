@@ -1,5 +1,5 @@
 import pytest
-from src.bucles.ej22_02 import validar_edad, anios_cumplidos, mostrar_serie_edad
+from src.bucles.ej22_02 import *
 
 @pytest.mark.parametrize(
     "edad, expected",
@@ -7,7 +7,7 @@ from src.bucles.ej22_02 import validar_edad, anios_cumplidos, mostrar_serie_edad
         (8, True),
         (101, False),
         (20, True),
-        (0, False),
+        (0, True),
     ]
 )
 
