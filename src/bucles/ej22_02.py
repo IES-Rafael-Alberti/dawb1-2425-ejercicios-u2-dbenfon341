@@ -10,7 +10,7 @@ def validar_edad(edad: int) -> bool:
 
 def anios_cumplidos(edad: int) -> str:
     serie_edad = ""
-    for i in range(edad+1):
+    for i in range(1, edad+1):
         serie_edad = f"{(serie_edad)} + {i}"
     return serie_edad[3:]
 
